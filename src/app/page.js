@@ -36,7 +36,7 @@ const Page = () => {
   }, [currentVehicle]);
 
   return (
-    <div className="bg-black text-white py-20 h-screen">
+    <div className=" text-white py-20 h-screen">
       <div className="flex flex-col text-center items-center gap-5">
         <p className="text-7xl text-center font-medium">
           Kerala Fare Calculator

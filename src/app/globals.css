@@ -70,6 +70,11 @@
     font-weight: 400;
     font-style: normal;
     color: #ffffff;
-    background: #000000;
+    background-image: url("/starry.png"); /* ✅ Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
   }
 }
