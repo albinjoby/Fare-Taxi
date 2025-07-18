@@ -14,6 +14,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import car from "/public/car.svg";
 import bus from "/public/bus.svg";
 import auto from "/public/auto.svg";
+import Checkout from "@/components/Checkout";
 
 const vehicles = [
   {
@@ -84,6 +85,9 @@ const Page = () => {
         <p className="text-4xl">Select your route</p>
         {/* map */}
         <Map />
+      </div>
+      <div className="flex flex-col gap-10 text-center pb-10 min-h-screen py-10">
+        <Checkout />
       </div>
     </div>
   );
