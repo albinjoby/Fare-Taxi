@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
 import {
   Carousel,
   CarouselContent,
@@ -35,9 +37,13 @@ const Page = () => {
     console.log(currentVehicle);
   }, [currentVehicle]);
 
+  const Map = dynamic(() => import("@/components/map"), {
+    ssr: false, // disables server-side rendering
+  });
+
   return (
-    <div className=" text-white py-20 h-screen">
-      <div className="flex flex-col text-center items-center gap-5">
+    <div className="flex flex-col items-center text-white py-20 h-screen">
+      <div className="flex flex-col text-center items-center gap-5 min-h-screen">
         <p className="text-7xl text-center font-medium">
           Kerala Fare Calculator
         </p>
@@ -73,6 +79,11 @@ const Page = () => {
             <CarouselNext />
           </Carousel>
         </div>
+      </div>
+      <div className="flex flex-col gap-10 text-center pb-10 min-h-screen py-10">
+        <p className="text-4xl">Select your route</p>
+        {/* map */}
+        <Map />
       </div>
     </div>
   );
